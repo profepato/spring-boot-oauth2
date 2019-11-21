@@ -108,4 +108,26 @@ Además se deja visible el ```@Bean AuthenticationManager``` para ser utilizado 
 ## AuthorizationServerConfiguration.java
 Clase utilizada para configurar la seguridad, el ```DataSource```, el ```PasswordEncoder```, el ```TokenStore``` y el ```AuthenticationManager```.
 
+## Postman
 
+### Requerir un token
+localhost:9191/oauth/token
+
+Body --> form-data  
+
+grant_type = password
+username = krish
+password = kpass
+
+Authorization
+Basic auth
+username = mobile
+password = pin
+
+### Verificar token
+localhost:9191/oauth/check_token?token={token}
+
+Authorization
+Basic auth
+username = mobile
+password = pin
